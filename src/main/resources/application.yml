@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: study
+  threads:
+    virtual:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:test
+    username: user
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.HSQLDialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+server:
+  port: 8080
